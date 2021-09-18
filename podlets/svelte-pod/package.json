@@ -4,8 +4,9 @@
 	"private": true,
 	"scripts": {
 		"build": "rm -rf ./public/build && rollup -c",
-		"dev": "rollup -c -w",
-		"start": "sirv public --no-clear"
+		"docker:build": "docker build -t podlet-svelte .",
+		"dev": "rollup -c -w && sirv public --no-clear",
+		"start": "npm run build; node index.js"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^17.0.0",

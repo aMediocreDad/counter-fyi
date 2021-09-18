@@ -4,7 +4,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "rm -rf dist && vite build",
-		"serve": "vite preview"
+		"docker:build": "docker build -t podlet-vue .",
+		"serve": "vite preview",
+		"start": "npm run build; node index.js"
 	},
 	"dependencies": {
 		"@podium/browser": "^1.1.0",

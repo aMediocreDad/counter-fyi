@@ -5,7 +5,7 @@ const fs = require("fs");
 const app = express();
 
 app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Origin", "http://localhost:6969");
+	res.header("Access-Control-Allow-Origin", "*");
 	next();
 });
 
@@ -13,7 +13,7 @@ const podlet = new Podlet({
 	name: "react-pod",
 	version: "0.1.0",
 	pathname: "/",
-	development: process.env.NODE_ENV === "production" ? false : true,
+	development: process.env.NODE_ENV === "development" ? true : false,
 });
 
 const buildfiles = fs.readdirSync("dist/assets");

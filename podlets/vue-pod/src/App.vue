@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { globalCounterSub } from "../../__services__/message.service";
+import { globalCounterSub } from "../__services__/message.service";
 
 defineProps({
 	count: Number,

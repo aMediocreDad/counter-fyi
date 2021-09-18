@@ -13,7 +13,7 @@ const podlet = new Podlet({
 	name: "vue-pod",
 	version: "0.1.0",
 	pathname: "/",
-	development: process.env.NODE_ENV === "production" ? false : true,
+	development: process.env.NODE_ENV === "development" ? true : false,
 });
 
 const buildfiles = fs.readdirSync("dist/assets");

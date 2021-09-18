@@ -19,6 +19,7 @@ layout.view(
 			${incoming.css.map(utils.buildLinkElement).join("\n")}
 			${incoming.js.map(utils.buildScriptElement).join("\n")}
 			<title>${incoming.view.title}</title>
+			${head || ""}
 		</head>
 		<body>
 			<header>
@@ -27,7 +28,7 @@ layout.view(
 				<a class="cta" href="#" target="_blank" rel="noopener">Read More</a>
 				<a class="cta" href="#" target="_blank" rel="noopener">View Code</a>
 			</header>
-			${body}
+			${body || ""}
 			<footer>Made with curiosity by <a href="http://www.amediocre.dev" target="_blank" rel="noopener">aMediocreDev</a> 🚀</footer>
 		</body>
 	</html>`
@@ -35,22 +36,22 @@ layout.view(
 
 const reactPod = layout.client.register({
 	name: "react-podlet",
-	uri: "http://localhost:7000/manifest.json",
+	uri: "http://react:7000/manifest.json",
 });
 
 const sveltePod = layout.client.register({
 	name: "svelte-podlet",
-	uri: "http://localhost:7100/manifest.json",
+	uri: "http://svelte:7100/manifest.json",
 });
 
 const vuePod = layout.client.register({
 	name: "vue-podlet",
-	uri: "http://localhost:7200/manifest.json",
+	uri: "http://vue:7200/manifest.json",
 });
 
 const imbaPod = layout.client.register({
 	name: "imba-podlet",
-	uri: "http://localhost:7300/manifest.json",
+	uri: "http://imba:7300/manifest.json",
 });
 
 app.use(layout.middleware());
@@ -66,7 +67,9 @@ app.get("/", async (_req, res) => {
 	incoming.podlets = response;
 	incoming.view.title = "Counter | FYI";
 
-	res.podiumSend(`<main>${response.join("")}</main>`);
+	res.podiumSend(
+		`<main>${response.join("") || "<p>Oops.. Podium or Dockker is misbehaving!</p>"}</main>`
+	);
 });
 
 layout.css({ value: "http://localhost:6969/static/layout.css" });

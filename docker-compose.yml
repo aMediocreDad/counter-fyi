@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+    app:
+        build: ./
+        ports:
+            - "6969:6969"
+        depends_on:
+            - react
+            - svelte
+            - vue
+            - imba
+    react:
+        build: ./podlets/react-pod
+        ports:
+            - "7000:7000"
+    svelte:
+        build: ./podlets/svelte-pod
+        ports:
+            - "7100:7100"
+    vue:
+        build: ./podlets/vue-pod
+        ports:
+            - "7200:7200"
+    imba:
+        build: ./podlets/imba-pod
+        ports:
+            - "7300:7300"

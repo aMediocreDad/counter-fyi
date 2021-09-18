@@ -1,4 +1,4 @@
-import { globalCounterSub } from "../../__services__/message.service.js"
+import { globalCounterSub } from "../__services__/message.service.js"
 
 let count = 0
 

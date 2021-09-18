@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { globalCounterSub } from "../../__services__/message.service";
+import { globalCounterSub } from "../__services__/message.service";
 
 function App() {
 	const [count, setCount] = useState(0);

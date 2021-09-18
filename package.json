@@ -7,20 +7,16 @@
 	"license": "MIT",
 	"description": "",
 	"scripts": {
-		"start": "concurrently \"npm run set:prod\" \"npm run start:react \" \"npm run start:svelte\"  \"npm run start:vue\"  \"npm run start:imba\" \"npm run start:layout\"  ",
-		"start:react": "cd podlets/react-pod && npm run build && nodemon index.js",
-		"start:svelte": "cd podlets/svelte-pod && npm run build && nodemon index.js",
-		"start:vue": "cd podlets/vue-pod && npm run build && nodemon index.js",
-		"start:imba": "cd podlets/imba-pod && npm run build && nodemon index.js",
-		"start:layout": "nodemon server.js",
-		"set:prod": "NODE_ENV=production"
+		"build": "npm run build:react && npm run build:svelte && npm run build:vue &&npm run build:imba",
+		"build:react": "cd podlets/react-pod && npm run docker:build",
+		"build:svelte": "cd podlets/svelte-pod && npm run docker:build",
+		"build:vue": "cd podlets/vue-pod && npm run docker:build",
+		"build:imba": "cd podlets/imba-pod && npm run docker:build",
+		"serve": "node server.js",
+		"start": "docker compose up --build"
 	},
 	"dependencies": {
 		"@podium/layout": "^4.6.98",
 		"express": "^4.17.1"
-	},
-	"devDependencies": {
-		"concurrently": "^6.2.1",
-		"nodemon": "^2.0.12"
 	}
 }

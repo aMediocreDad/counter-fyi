@@ -12,7 +12,7 @@ const podlet = new Podlet({
 	name: "svelte-pod",
 	version: "0.1.0",
 	pathname: "/",
-	development: process.env.NODE_ENV === "production" ? false : true,
+	development: process.env.NODE_ENV === "development" ? true : false,
 });
 
 podlet.js({

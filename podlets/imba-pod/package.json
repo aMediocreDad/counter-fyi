@@ -1,8 +1,10 @@
 {
   "name": "imba-pod",
   "scripts": {
-    "start": "imba -w server.imba",
-    "build": "rm -rf dist && imba build server.imba"
+    "dev": "imba -w server.imba",
+    "build": "rm -rf dist && imba build server.imba",
+    "docker:build": "docker build -t podlet-imba .",
+    "start": "npm run build; node index.js"
   },
   "dependencies": {
     "@podium/browser": "^1.1.0",

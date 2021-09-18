@@ -1,5 +1,5 @@
 <script>
-	import { globalCounterSub } from "../../__services__/message.service";
+	import { globalCounterSub } from "../__services__/message.service";
 
 	const count = globalCounterSub("svelte-pod");
 	const decrement = () => count.update((n) => --n);
