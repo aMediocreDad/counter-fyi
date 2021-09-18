@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
+
+:root {
+	--s: 0.4rem;
+	--m: 1rem;
+	--l: 3rem;
+	--xl: 6rem;
+	--xxl: 10rem;
+	--MAX: 9999999px;
+
+	--bg: #1c2129;
+	--text: #fbfaf7;
+	--acc: #b3b2b8;
+	--acc2: #747d88;
+	--link: #2a7f62;
+
+	font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+		Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header,
+footer {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-weight: 700;
+	text-shadow: 0 0 4px var(--bg);
+}
+
+h1 {
+	font-size: 5rem;
+	margin-bottom: 0;
+}
+
+a {
+	color: var(--link);
+}
+
+a.cta {
+	display: inline-block;
+	margin: 0 0.5rem;
+	background: var(--link);
+	color: var(--text);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	filter: hue-rotate(90deg);
+}
+
+a.cta:active {
+	transform: scale(0.95);
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: 4rem;
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+article {
+	display: grid;
+	place-content: center;
+	align-items: center;
+	grid-template-columns: repeat(3, max-content);
+}
+
+div.number {
+	height: var(--xxl);
+	width: var(--xxl);
+	display: grid;
+	place-content: center;
+
+	border: var(--s) solid var(--acc);
+	border-radius: var(--MAX);
+	box-shadow: inset 0 0 6px #1114, 0 0 4px #1119;
+	background: var(--acc2);
+	font-size: var(--l);
+}
+
+div.container {
+	position: relative;
+	display: grid;
+	height: 400px;
+	width: 400px;
+	color: var(--text);
+	isolation: isolate;
+
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+div#react-pod {
+	background-image: url(./react-logo.svg);
+}
+
+div#svelte-pod {
+	background-image: url(./svelte-logo.svg);
+}
+
+div#vue-pod {
+	background-image: url(./vue-logo.svg);
+}
+
+div#imba-pod {
+	background-image: url(./imba-logo.svg);
+}
+
+div.container:after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: var(--bg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+div.number,
+button {
+	user-select: none;
+}
+
+button {
+	height: var(--xl);
+	width: var(--xl);
+	position: relative;
+	top: 10%;
+
+	border: var(--s) solid var(--acc);
+	border-radius: var(--MAX);
+	box-shadow: inset 0 0 6px #1114, 0 0 4px #1119;
+	background: var(--acc2);
+	color: var(--text);
+	font-size: var(--l);
+	font-weight: 700;
+	text-shadow: 0 0 6px var(--bg);
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button.decrement {
+	margin-right: calc(-1 * (var(--l)));
+	line-height: var(--s);
+
+	z-index: 1;
+}
+
+button.increment {
+	margin-left: calc(-1 * var(--l));
+}

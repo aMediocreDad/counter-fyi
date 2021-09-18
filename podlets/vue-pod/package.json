@@ -1,0 +1,20 @@
+{
+	"name": "vue-pod",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "rm -rf dist && vite build",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@podium/browser": "^1.1.0",
+		"@podium/podlet": "^4.4.39",
+		"express": "^4.17.1",
+		"vue": "^3.2.6"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^1.6.1",
+		"@vue/compiler-sfc": "^3.2.6",
+		"vite": "^2.5.4"
+	}
+}

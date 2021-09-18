@@ -1,0 +1,16 @@
+{
+  "name": "imba-pod",
+  "scripts": {
+    "start": "imba -w server.imba",
+    "build": "rm -rf dist && imba build server.imba"
+  },
+  "dependencies": {
+    "@podium/browser": "^1.1.0",
+    "@podium/podlet": "^4.4.39",
+    "express": "^4.17.1",
+    "imba": "^2.0.0-alpha.146"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0-dev.20210915"
+  }
+}
