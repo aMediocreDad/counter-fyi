@@ -2,12 +2,18 @@
 	"name": "counter-fyi",
 	"version": "0.1.0",
 	"main": "server.js",
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"microfrontend",
+		"react",
+		"vue",
+		"svelte",
+		"imba"
+	],
+	"author": "aMediocreDad",
 	"license": "MIT",
-	"description": "",
+	"description": "A microfrontend demoing a composition of four frontend frameworks that share state.",
 	"scripts": {
-		"build": "npm run build:react && npm run build:svelte && npm run build:vue &&npm run build:imba",
+		"build": "npm run build:react && npm run build:svelte && npm run build:vue && npm run build:imba",
 		"build:react": "cd podlets/react-pod && npm run docker:build",
 		"build:svelte": "cd podlets/svelte-pod && npm run docker:build",
 		"build:vue": "cd podlets/vue-pod && npm run docker:build",

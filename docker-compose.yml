@@ -4,7 +4,7 @@ services:
     app:
         build: ./
         ports:
-            - "6969:6969"
+            - "80:6969"
         depends_on:
             - react
             - svelte

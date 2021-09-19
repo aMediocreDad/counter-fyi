@@ -1,5 +1,6 @@
 {
   "name": "imba-pod",
+  "version": "0.1.0",
   "scripts": {
     "dev": "imba -w server.imba",
     "build": "rm -rf dist && imba build server.imba",

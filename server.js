@@ -26,7 +26,7 @@ layout.view(
 				<h1>Counter FYI</h1>
 				<p>This is a Micro Frontend demoing four different frameworks/languages in a single app.</p>
 				<a class="cta" href="#" target="_blank" rel="noopener">Read More</a>
-				<a class="cta" href="#" target="_blank" rel="noopener">View Code</a>
+				<a class="cta" href="https://github.com/aMediocreDad/counter-fyi" target="_blank" rel="noopener">View Code</a>
 			</header>
 			${body || ""}
 			<footer>Made with curiosity by <a href="http://www.amediocre.dev" target="_blank" rel="noopener">aMediocreDev</a> 🚀</footer>
@@ -72,7 +72,7 @@ app.get("/", async (_req, res) => {
 	);
 });
 
-layout.css({ value: "http://localhost:6969/static/layout.css" });
+layout.css({ value: "http://localhost:80/static/layout.css" });
 app.use("/static", express.static("static"));
 
 app.listen(6969);

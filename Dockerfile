@@ -10,4 +10,5 @@ RUN npm ci
 COPY static ./static/
 COPY server.js ./
 
+EXPOSE 6969
 CMD [ "npm", "run", "serve" ]

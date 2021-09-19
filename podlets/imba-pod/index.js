@@ -5,7 +5,7 @@ const fs = require("fs");
 const app = express();
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:6969");
+  res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 

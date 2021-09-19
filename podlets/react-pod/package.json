@@ -1,12 +1,12 @@
 {
 	"name": "react-pod",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"scripts": {
 		"dev": "vite",
 		"build": "rm -rf dist/assets && vite build",
 		"docker:build": "docker build -t podlet-react .",
 		"serve": "vite preview",
-		"start": "npm run build && node index.js"
+		"start": "npm run build; node index.js"
 	},
 	"dependencies": {
 		"@podium/browser": "^1.1.0",
