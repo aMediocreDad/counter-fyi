@@ -25,7 +25,7 @@ layout.view(
 			<header>
 				<h1>Counter FYI</h1>
 				<p>This is a Micro Frontend demoing four different frameworks/languages in a single app.</p>
-				<a class="cta" href="#" target="_blank" rel="noopener">Read More</a>
+				<a class="cta" href="https://dev.to/amediocredev/comparing-frameworks-jg4" target="_blank" rel="noopener">Read More</a>
 				<a class="cta" href="https://github.com/aMediocreDad/counter-fyi" target="_blank" rel="noopener">View Code</a>
 			</header>
 			${body || ""}

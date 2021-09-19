@@ -3,8 +3,8 @@
 :root {
 	--s: 0.4rem;
 	--m: 1rem;
-	--l: 3rem;
-	--xl: 6rem;
+	--l: 2.5rem;
+	--xl: 5rem;
 	--xxl: 10rem;
 	--MAX: 9999999px;
 
@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: var(--xl);
 	margin-bottom: 0;
 }
 
@@ -139,7 +139,9 @@ button {
 	height: var(--xl);
 	width: var(--xl);
 	position: relative;
-	top: 10%;
+	top: 20%;
+	padding: 0;
+	touch-action: manipulation;
 
 	border: var(--s) solid var(--acc);
 	border-radius: var(--MAX);
@@ -149,6 +151,9 @@ button {
 	font-size: var(--l);
 	font-weight: 700;
 	text-shadow: 0 0 6px var(--bg);
+
+	padding-top: auto;
+	padding-bottom: 15%;
 }
 
 button:active {
@@ -157,7 +162,6 @@ button:active {
 
 button.decrement {
 	margin-right: calc(-1 * (var(--l)));
-	line-height: var(--s);
 
 	z-index: 1;
 }
